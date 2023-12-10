@@ -1,13 +1,18 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #B1A296;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'JetBrains Mono', MonoSpace;
+  background-color: #e1d8d1;
+  
 }
-
+body{
+  font-family: 'JetBrains Mono', MonoSpace;
+  font-weight: 800;
+  margin: 0;
+}
 .menu ul {
   list-style: none;
-  background-color: #557A95;
+  background-color: #5d5c61;
 
 }
 
@@ -29,13 +34,83 @@ html {
   color: deepskyblue;
 }
 
+
+
+
+.container{
+  width:80%;
+  margin:0 auto;
+}
+header{
+  background: #557a95;
+  
+}
+header ::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo{
+  float:left;
+}
+
+nav{
+  float: right;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+nav li{
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+nav a{
+   color: #b1a296;
+  text-decoration: none;
+  text-transform: uppercase;
+   font-size: 14px;
+}
+
+nav a :hover{
+  color:#000;
+}
+
+nav a::before{
+  content: '';
+  display:block;
+  height:3px;
+  background-color: #b1a296;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+
+
 .MissionStatement {
+  display: flex;
+  font-family: 'JetBrains Mono', MonoSpace;
   background-color: #5d5c61;
   background-position: center center;
   background-repeat: no-repeat;
-  color: #fcfcfc;
+  color: #ffffff;
   padding: 20px;
-  
+  font-size: 16px;
   /*
   text-shadow: 
   -1px -1px 0 #ffffff,  
@@ -44,6 +119,42 @@ html {
   1px 1px 0 #ffffff;
   */
 }
+
+.MissionStatement h1{
+  flex: 1;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 800;
+  font-style: italic;
+  color: #ffffff;
+}
+.MissionStatement p{
+  flex:1;
+  font-size: 18px;
+}
+
+.Socials h1{
+   margin-bottom: 20px;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 800;
+  font-style: italic;
+  color: #000;
+}
+
+.SocialIcons{
+  display: flex; 
+  justify-content: center;
+}
+
+.SocialIcons #insta , .SocialIcons #twitter{
+  margin: 0 20px; 
+  transition: all ease-in-out 250ms;
+}
+.SocialIcons #insta:hover, .SocialIcons #twitter:hover{
+  transform: scale(1.2);
+}
+
 #HopeVan {
   width: 100%;
   height: auto;
@@ -57,28 +168,29 @@ html {
 
 /*Contact Page */
 
-.frame{
-  width: 80%;
-  height: 25vh ;
-  background-color: #557a95;;
-  border: 3px solid #fcfcfc;;
-  padding:1%vw ;
-  position: absolute ;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%,-50%) ;
-  border-radius: 15px;
-  float:left;
+.img1 {width: 100%;
+      height: auto;
+      display: block; }
+.profiles {
+  text-align: center; 
+  margin: auto; 
+  flex: 1;
+  background-color: #5d5c61;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;}
+.whatwedo {
+  margin: auto; 
+  flex: 1;
+  background-color: #5d5c61;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;
+  font-size: 18px;
 }
-.profileOne{
-  
- position: absolute;
-  transform: translate(50%,20%);
-}
-.test{
-  min-width: 200% ;
-  margin: 0 auto;
-}
+
 
 /*End*/
 
@@ -90,9 +202,78 @@ html {
   background-color: #5d5c61;
   background-position: center center;
   background-repeat: no-repeat;
-  color: #fcfcfc;
+  color: #ffffff;
   padding: 20px;
-  outline: 2px solid #ffffff;
+}
+.Headercontainer {
+  font-family: 'JetBrains Mono', MonoSpace;
+  font-style: italic;
+  position: relative;
+  text-align: center;
+  color: #fff; /* Text color */
+}
+.Donationimg {
+  width: 100%; 
+  height: auto; 
+  display: block;
+}
+.Donationtitle{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em; 
+  opacity: 0; 
+  animation: slideIn 1s forwards; 
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) translateY(-100%); 
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%); 
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/*End*/
+
+/*Support Page*/
+.care {
+  background-color: #5d5c61;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;
+}
+.listing {
+  text-align: left;
+  background-color: #5d5c61;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;
+}
+.listing p {color: #b1a296;}
+.listing a {color: darkseagreen;}
+.rlisting a:hover {color: purple;}
+.helping {width: 100%;
+height: auto;
+display: block; }
+.capt2 {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  background-color: black;
+  background-position: center center;
+  background-repeat: no-repeat;
+       }
   /*
   text-shadow: 
   -1px -1px 0 #ffffff,  
@@ -100,5 +281,6 @@ html {
   -1px 1px 0 #ffffff,
   1px 1px 0 #ffffff;
   */
+
 /*End*/
 
