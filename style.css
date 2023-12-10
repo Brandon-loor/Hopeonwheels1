@@ -21,6 +21,7 @@ html {
 }
 .menu a:hover {  color: deepskyblue;}
 
-MissionStatement{
+.MissionStatement{
   background-image: url("VanDriving.jpg")
  }
+.caption { font-size: 14px;}
